@@ -1,0 +1,40 @@
+{
+  "name": "firstProject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "nyc --exclude-after-remap=false gulp jasmine"
+  },
+  "keywords": [],
+  "author": "script972",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.12",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-install": "^2.1.0",
+    "del": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-jasmine": "^4.0.0",
+    "gulp-tslint": "^8.1.4",
+    "gulp-typescript": "^5.0.1",
+    "gulp-uglify": "^3.0.2",
+    "jasmine": "^3.3.1",
+    "jasmine-ts": "^0.3.0",
+    "nyc": "^13.3.0",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.4000"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "include": [
+      "dist/**/*.js"
+    ],
+    "exclude": [
+      "dist/**/*[sS]pec.js"
+    ]
+  }
+}
